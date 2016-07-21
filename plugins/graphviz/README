@@ -3,6 +3,43 @@ graphviz Plugin for DokuWiki
 All documentation for this plugin can be found at
 http://www.dokuwiki.org/plugin:graphviz
 
+==========================================
+==========================================
+==========================================
+
+Deze plugin is aangepast door HJ van Reenen
+Geschikt gemaakt voor svg
+Gebruik::
+
+    <graphviz svg 800x600>
+    digraph main_proces {
+        A [URL="http://google.com" target="_parent" tooltip="dit is een tooltip"];
+        A -> B;
+    }
+    </graphviz>
+
+Je kunt hierdoor svg eigenschappen gebruiken zoals hyperlinks, tooltips, anderen en css.
+.note:  800x600 is optioneel en geeft maten aan
+
+Voor generen van afbeeldingen (oude manier)::
+
+    <graphviz> of <graphviz png>
+    digraph main_proces {
+        A -> B;
+    }
+    </graphviz>
+
+
+-----------------
+verder:
+ - svg.php is nieuw
+ - syntax.php is aangepast op sommige punten
+ - svg wordt binnen <embed>-html-tag geplaatst
+ - graphviz software moet op server draaien voor svg, voor png kan via remote graphviz-tool worden gewerkt.
+
+
+================================================
+
 If you install this plugin manually, make sure it is installed in
 lib/plugins/graphviz/ - if the folder is called different it
 will not work!
